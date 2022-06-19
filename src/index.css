@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;1,600&display=swap');
+
+:root{
+  --primary-clr: #6243e6;
+  --text-clr-dark: #1d1445;
+  --light-primary-clr: #f0edff;
+  --light--secondary-clr: #e2dbff;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  background: rgb(240,237,255);
+  background: radial-gradient(circle, rgba(240,237,255,1) 0%, rgba(226,219,255,1) 44%);
+  color: var(--text-clr-dark); 
+}
+
+h1{
+  color: var(--primary-clr);
+  font-weight: 400;
+  margin-bottom:1em;
+}
+
+.container{
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.test-words{
+  font-family: 'Source Code Pro', monospace;
+  max-width:90%;
+  margin:3em auto;
+  border:2px solid var(--primary-clr);
+  padding:2em;
+  border-radius:1em;
+}
+
