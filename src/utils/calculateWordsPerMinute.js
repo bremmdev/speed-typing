@@ -1,8 +1,8 @@
 export const calculateWordsPerMinute = (testWords, typedText, time_limit) => {
   const incorrectsArr = []
   let numberOfCorrectWords = 0
-  const typedTextArray = typedText.split(' ')
- 
+  const typedTextArray = typedText.trim().split(" ").filter((word) => word !== "")
+  
   //create an array with the indexes of the incorrectly typed words
   for(let i = 0; i<testWords.length; i++){
     if(!typedTextArray[i] || testWords[i] !== typedTextArray[i]){

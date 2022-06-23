@@ -4,7 +4,7 @@ import TestWord from "./TestWord.jsx";
 import { chooseRandomWords, WORD_COUNT } from '../utils/chooseRandomWords.js'
 import { calculateWordsPerMinute } from "../utils/calculateWordsPerMinute.js";
 
-const TIME_LIMIT = 60;
+const TIME_LIMIT = 16;
 
 const TypeTest = () => {
   const [testVersion, setTestVersion] = useState(0); //state for resetting the test
@@ -19,8 +19,8 @@ const TypeTest = () => {
   const testWords = useMemo(() => chooseRandomWords(), [testVersion]);
 
   //create an array from the typed text and count the individual words to track the current word
-  let currentWordIdx = typedText ? typedText.split(" ").length : 0
-
+  let currentWordIdx = typedText ? typedText.trim().split(" ").filter((word) => word !== "").length : 0
+  
   //prevent overflow for when user types after keeps typing all words
   if(currentWordIdx > WORD_COUNT){
     currentWordIdx = WORD_COUNT

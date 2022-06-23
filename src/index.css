@@ -134,7 +134,7 @@ h1{
 
 @media(max-width:560px){
   :root{
-    font-size:0.75rem;
+    font-size:0.7rem;
   }
 
   .container{
@@ -146,7 +146,15 @@ h1{
   }
 
   .test-words{
-    margin:2em auto;
+    margin:1em auto;
     padding:1.5em;
+  }
+
+  .reset-btn{
+    margin:1em auto;
+  }
+
+  h1{
+    font-size:1.5rem;
   }
 }
