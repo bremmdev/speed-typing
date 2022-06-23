@@ -3,8 +3,8 @@
 :root{
   --primary-clr: #6243e6;
   --text-clr-dark: #1d1445;
-  --light-primary-clr: #f0edff;
-  --light--secondary-clr: #e2dbff;
+  --light-primary-clr: #efecfd;
+  --light--secondary-clr: #d0c7f8;
 }
 
 *{
@@ -17,9 +17,11 @@ body {
   justify-content: center;
   align-items: center;
   text-align:center;
-  background: rgb(240,237,255);
-  background: radial-gradient(circle, rgba(240,237,255,1) 0%, rgba(226,219,255,1) 44%);
+  background: var(--light-primary-clr);
   color: var(--text-clr-dark); 
+  min-height:100vh;
+  margin:0;
+  font-size:1rem;
 }
 
 h1{
@@ -29,16 +31,122 @@ h1{
 }
 
 .container{
-  max-width:1100px;
+  max-width:1140px;
+  margin:0 auto;
+  padding:0 2em;
+}
+
+.intro-text{
+  max-width: 800px;
   margin:0 auto;
 }
 
+/* TEST WORDS */
+
 .test-words{
   font-family: 'Source Code Pro', monospace;
-  max-width:90%;
   margin:3em auto;
-  border:2px solid var(--primary-clr);
   padding:2em;
-  border-radius:1em;
+  border-radius:1rem;
+  background:rgb(98, 67, 230, 0.15);
 }
 
+.test-words .current{
+  font-weight: 600;
+}
+
+.test-words .incorrect{
+  color:red;
+  font-weight: 600;
+}
+
+/* RESET */ 
+
+.reset-btn{
+  display:block;
+  margin:2em auto;
+  padding:0.7em 2.4em;
+  outline:none;
+  border:none;
+  background-color: var(--primary-clr);
+  color:var(--light-primary-clr);
+  font-weight: 600;
+  font-size:inherit;
+  font-family:inherit;
+  border-radius:100vw;
+  cursor:pointer;
+}
+
+.reset-btn:hover,
+.reset-btn:focus{
+  opacity:0.9;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.reset-btn:disabled{
+ opacity:0.4;
+ cursor:initial;
+}
+
+/* TYPE INPUT */
+
+.type-input-field{
+  width: 100%;
+  margin:0 auto;
+  padding:2em;
+  border:2px solid transparent;
+  outline:0;
+  font-family: 'Source Code Pro', monospace;
+  font-size:1rem;
+  border-radius:1rem;
+  resize: none;
+  background:rgb(98, 67, 230, 0.15);
+}
+
+.type-input-field:focus{
+  border:2px solid var(--primary-clr);
+}
+
+.type-input-field:disabled{
+  opacity:0.5;
+}
+
+/* STATS */
+
+.test-stats{
+  display:flex;
+  justify-content: space-between;
+  max-width: 600px;
+  margin:0 auto;
+}
+
+.test-stats > div{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.test-stats .highlighted{
+  font-size:2rem;
+  color:var(--primary-clr);
+  font-weight: 700;
+}
+
+@media(max-width:560px){
+  :root{
+    font-size:0.75rem;
+  }
+
+  .container{
+    padding:0 1em;
+  }
+
+  .type-input-field{
+    padding:1.5em;
+  }
+
+  .test-words{
+    margin:2em auto;
+    padding:1.5em;
+  }
+}

@@ -13,6 +13,6 @@ describe('Title', () => {
   })
 
   it('should render "type the following words"', () => {
-    expect(screen.getByText("type the following words", { exact: false })).toBeInTheDocument()
+    expect(screen.getByText(/Type as many words as you can in 60 seconds/i)).toBeInTheDocument()
   })
 })

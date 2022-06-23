@@ -1,16 +1,14 @@
-import { useState } from 'react'
-import Title from './Components/Title.jsx'
-import TestWords from './Components/TestWords.jsx'
+import { useState } from "react";
+import Title from "./Components/Title.jsx";
+import TypeTest from "./Components/TypeTest.jsx";
 
 function App() {
-  
-  
   return (
     <main className="container">
       <Title />
-      <TestWords />
+      <TypeTest />
     </main>
-  )
+  );
 }
 
-export default App
+export default App;

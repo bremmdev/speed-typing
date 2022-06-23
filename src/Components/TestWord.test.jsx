@@ -5,47 +5,47 @@ import TestWord from './TestWord.jsx'
 
 describe('TestWord', () => {
   it('should have test-word class on render', () => {
-    render(<TestWord word="imagine" isActive={false} isWrong={false}/>)
+    render(<TestWord word="imagine" isCurrent={false} isIncorrect={false}/>)
     expect(screen.getByText('imagine')).toHaveClass('test-word')
   })
 
-  it('should not have active class on render', () => {
-    render(<TestWord word="imagine" isActive={false} isWrong={false}/>)
-    expect(screen.getByText('imagine')).not.toHaveClass('active')
+  it('should not have current class on render', () => {
+    render(<TestWord word="imagine" isCurrent={false} isIncorrect={false}/>)
+    expect(screen.getByText('imagine')).not.toHaveClass('current')
   })
 
-  it('should not have wrong class on render', () => {
-    render(<TestWord word="imagine" isActive={false} isWrong={false}/>)
-    expect(screen.getByText('imagine')).not.toHaveClass('wrong')
+  it('should not have incorrect class on render', () => {
+    render(<TestWord word="imagine" isCurrent={false} isIncorrect={false}/>)
+    expect(screen.getByText('imagine')).not.toHaveClass('incorrect')
   })
 
-  it('should have test-word class when word isActive', () => {
-    render(<TestWord word="imagine" isActive={true} isWrong={false}/>)
+  it('should have test-word class when word isCurrent', () => {
+    render(<TestWord word="imagine" isCurrent={true} isIncorrect={false}/>)
     expect(screen.getByText('imagine')).toHaveClass('test-word')
   })
 
-  it('should have active class when word isActive', () => {
-    render(<TestWord word="imagine" isActive={true} isWrong={false}/>)
-      expect(screen.getByText('imagine')).toHaveClass('active')
+  it('should have current class when word isCurrent', () => {
+    render(<TestWord word="imagine" isCurrent={true} isIncorrect={false}/>)
+      expect(screen.getByText('imagine')).toHaveClass('current')
   })
 
-  it('should not have wrong class when word isActive', () => {
-    render(<TestWord word="imagine" isActive={true} isWrong={false}/>)
-    expect(screen.getByText('imagine')).not.toHaveClass('wrong')
+  it('should not have incorrect class when word isCurrent', () => {
+    render(<TestWord word="imagine" isCurrent={true} isIncorrect={false}/>)
+    expect(screen.getByText('imagine')).not.toHaveClass('incorrect')
   })
 
-  it('should have test-word class when word isWrong', () => {
-    render(<TestWord word="imagine" isActive={false} isWrong={true}/>)
+  it('should have test-word class when word isIncorrect', () => {
+    render(<TestWord word="imagine" isCurrent={false} isIncorrect={true}/>)
     expect(screen.getByText('imagine')).toHaveClass('test-word')
   })
 
-  it('should not have active class when word isWrong', () => {
-    render(<TestWord word="imagine" isActive={false} isWrong={true}/>)
-    expect(screen.getByText('imagine')).not.toHaveClass('active')
+  it('should not have current class when word isIncorrect', () => {
+    render(<TestWord word="imagine" isCurrent={false} isIncorrect={true}/>)
+    expect(screen.getByText('imagine')).not.toHaveClass('current')
   })
 
-  it('should have wrong class when word isWrong', () => {
-    render(<TestWord word="imagine" isActive={false} isWrong={true}/>)
-     expect(screen.getByText('imagine')).toHaveClass('wrong')
+  it('should have incorrect class when word isIncorrect', () => {
+    render(<TestWord word="imagine" isCurrent={false} isIncorrect={true}/>)
+     expect(screen.getByText('imagine')).toHaveClass('incorrect')
   })
 })
