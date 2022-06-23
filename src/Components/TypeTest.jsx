@@ -4,7 +4,7 @@ import TestWord from "./TestWord.jsx";
 import { chooseRandomWords, WORD_COUNT } from '../utils/chooseRandomWords.js'
 import { calculateWordsPerMinute } from "../utils/calculateWordsPerMinute.js";
 
-const TIME_LIMIT = 16;
+const TIME_LIMIT = 60;
 
 const TypeTest = () => {
   const [testVersion, setTestVersion] = useState(0); //state for resetting the test
