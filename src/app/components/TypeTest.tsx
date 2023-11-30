@@ -79,7 +79,7 @@ const TypeTest = ({ words }: Props) => {
       />
       <textarea
         autoFocus
-        className="outline-none font-mono bg-violet-200 rounded-xl p-4 w-full autofocus resize-none h-40 sm:h-56 md:h-52 sm:p-6 md:p-8 text-xs sm:text-base focus:ring-violet-600 focus:ring-2 disabled:opacity-50"
+        className="outline-none font-mono bg-violet-200 rounded-xl p-4 w-full resize-none h-40 sm:h-56 md:h-52 sm:p-6 text-xs sm:text-base focus:ring-violet-600 focus:ring-2 disabled:opacity-50"
         placeholder="Start typing the words to begin the test..."
         spellCheck="false"
         autoComplete="off"
