@@ -39,7 +39,7 @@ const TestWords = ({
 
   return (
     <>
-      <div className="font-mono bg-violet-200 select-none p-4 rounded-xl text-center sm:p-6 text-xs sm:text-base">
+      <div className="font-mono bg-violet-200 select-none p-4 rounded-xl text-center sm:p-6 md:p-8 text-xs sm:text-base">
         {wordsWithHighlight}
       </div>
     </>
